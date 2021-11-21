@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #000000;
+    --color2: #ffffff;
+    --color3: #d02561;
+    --color4: #04091a;
+    --color5: #707070;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.btn {
+    border: 0;
+    padding: .5rem 1rem;
+    background: var(--color3);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn:hover {
+    background: var(--color2);
+    color: var(--color3);
+}
+
+a .btn {
+    color: var(--color2);
+}
+
+.red {
+    color: var(--color3);
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    background: var(--color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+/* Accueil */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .heroD, .hero .heroG {
+    width: 50%;
+    height: 100%;
+}
+
+.hero .heroD {
+    background-image: url('img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .heroG {
+    background: var(--color1);
+    color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .heroG div {
+    width: 80%;
+}
+
+.hero .heroG div h1 {
+    font-size: 3rem;
+}
+
+.hero .heroG div p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.hero .logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--color2);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero .socials {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.hero .socials ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.hero .socials ul li {
+    margin-left: 1rem;
+    background: var(--color1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1.5rem;
+}
+
+.hero .socials ul li a {
+    color: var(--color3);
+    transition: color .5s;
+}
+
+.hero .socials ul li a:hover {
+    color: var(--color2);
+}
+
+.hero .socials ul {
+    display: flex;
+}
+
+/* Discord */
+.discord {
+    background: var(--color2);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.discord h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* RoadMap */
+.roadmap {
+    background: var(--color1);
+    padding: 4rem 0;
+    color: var(--color2);
+}
+
+.roadmap h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.roadmap .bloc {
+    background: var(--color4);
+    margin-bottom: 3rem;
+    padding: 1rem;
+    position: relative;
+    margin-left: 2px;
+}
+
+.roadmap h4 {
+    margin: 1rem 0;
+}
+
+.roadmap p {
+    line-height: 1.5rem;
+}
+
+.roadmap .number {
+    position: absolute;
+    top: -1rem;
+    left: calc(1rem - 1px);
+    background: var(--color3);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roadmap .number.off {
+    background: var(--color2);
+    color: var(--color3);
+}
+
+.roadmap .container {
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    left: 3rem;
+    height: 100%;
+    width: 2px;
+    background: var(--color3);
+    top: 30px;
+}
+
+/* Team */
+.team {
+    padding: 4rem 0;
+}
+
+.team h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.team .team__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team .member {
+    width: 31%;
+}
+
+.team .member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team .member h4 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.team .member .job {
+    color: var(--color5);
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.team__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer */
+footer {
+    background: var(--color1);
+    color: var(--color2);
+    padding: 1rem 0;
+}
+
+.footer__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__flex ul {
+    list-style: none;
+}
+
+.footer__flex ul li a {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media all and (max-width: 767px) {
+    .hero .heroD {
+        display: none;
+    }
+
+    .hero .heroD, .hero .heroG {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero .heroG div h1 {
+        font-size: 2rem;
+    }
+
+    .team__flex {
+        flex-direction: column;
+    }
+
+    .team__flex .member {
+        margin-bottom: 3rem;
+    }
+
+    .team__flex .member:last-child {
+        margin-bottom: 0;
+    }
+
+    .team .member {
+        width: 100%;
+    }
+}
